@@ -8,7 +8,7 @@ checkout ([$class: 'GitSCM', branches: [[name: '*/master']], userRemoteConfigs: 
 
 
 userRemoteConfigs: [[credentialsId: 'instance_id',
-url:'git@github.com:URL']]]
+url:'git@github.com:URL']]
 }
 }
 
