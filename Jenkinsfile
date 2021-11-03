@@ -25,8 +25,8 @@ pipeline{
       script{
        sh '''
             echo "linting and formating"
-            sudo gofmt -w hello.go
-            sudo go vet hello.go
+            gofmt -w hello.go
+            #sudo go vet hello.go
        '''
 }
 }
