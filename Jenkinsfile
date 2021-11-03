@@ -13,7 +13,8 @@ pipeline{
    stage("Repo_clone"){
        //Clone repo from GitHub
       steps {
-         checkout ([$class: 'GitSCM', branches: [[name: '*/master']], userRemoteConfigs: [[credentialsId: 'instance_id', url: 'git@github.com:shubh9975/go-app.git']]])
+         checkout ([$class: 'GitSCM', branches: [[name: '*/master']], userRemoteConfigs: [[credentialsId: 'mykey', url: 'git@github.com:shubh9975/go-app.git']]])
+
 
 }
 }
