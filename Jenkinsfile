@@ -33,8 +33,8 @@ pipeline{
       script{
        sh '''
             echo "linting and formating"
-            gofmt -w hello.go
-            #sudo go vet hello.go
+            gofmt  hello.go
+            //sudo go vet hello.go
        '''
 }
 }
