@@ -33,10 +33,7 @@ pipeline{
       script{
        sh '''
             export GOPATH=$WORKSPACE
-            //echo "linting and formating"
             go version 
-            //go run hello.go
-            //sudo go vet hello.go
        '''
 }
 }
