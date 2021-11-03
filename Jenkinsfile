@@ -31,12 +31,13 @@ pipeline{
     //fmt and lint
      steps{
       script{
-       sh "go version"
+       sh '''
+            export GOPATH=$WORKSPACE
             //echo "linting and formating"
-            //go version 
+            go version 
             //go run hello.go
             //sudo go vet hello.go
-       //'''
+       '''
 }
 }
 }
