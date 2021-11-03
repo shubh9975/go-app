@@ -11,7 +11,7 @@ userRemoteConfigs: [[credentialsId: 'instance_id',
 url:'git@github.com:URL']]
 }
 }
-
+}
 
 stage("linting and formating"){
 //linting and formating
