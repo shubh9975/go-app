@@ -15,6 +15,9 @@ pipeline{
         steps{
             step([$class: 'WsCleanup'])
 
+}
+}
+
    stage("Repo_clone"){
        //Clone repo from GitHub
       steps {
