@@ -32,7 +32,9 @@ pipeline{
      steps{
       script{
        sh '''
-            go version 
+            go version
+            gofmt -w hello.go 
+            go vet hello.go 
        '''
 }
 }
