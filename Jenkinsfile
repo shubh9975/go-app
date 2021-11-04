@@ -32,7 +32,6 @@ pipeline{
      steps{
       script{
        sh '''
-            //export GOPATH=$WORKSPACE
             go version 
        '''
 }
