@@ -58,7 +58,7 @@ pipeline{
 }
 }
   
-   stage("update version or infra"){
+   //stage("update version or infra"){
     //fmt and lint
      //steps{
       //script{
@@ -67,8 +67,8 @@ pipeline{
             //gofmt -w hello.go
             //go vet hello.go
        //'''
-}
-}
+//}
+//}
 
 
 }
