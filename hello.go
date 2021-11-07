@@ -4,6 +4,6 @@ import "fmt"
 
 //a := "test"
 func main() {
-  b := "Hellworold"
+  //b := "Hellworold"
         fmt.Printf("shubham")
 }
