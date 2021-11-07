@@ -35,7 +35,7 @@ pipeline{
             go version
             gofmt -w hello.go 
             go vet hello.go 
-       '''
+      } '''
 }
 }
   stage("Image Building"){
@@ -45,7 +45,7 @@ pipeline{
            docker build -t bfctech:v1 .
            docker tag bfctech:v1 alwaysavail/bfc:v1
             
-       '''
+     }  '''
 }
 }
   stage("Image scanning"){
@@ -54,26 +54,10 @@ pipeline{
        sh '''
             trivy image alwaysavail/bfc:v1
             docker push alwaysavail/bfc:v1
-       '''
+    }   '''
 }
 }
   
-   //stage("update version or infra"){
-    //fmt and lint
-     //steps{
-      //script{
-       //sh '''
-            //go version
-            //gofmt -w hello.go
-            //go vet hello.go
-       //'''
-//}
-//}
-
 
 }
-
-
-
 }
-} 
