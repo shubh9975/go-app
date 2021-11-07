@@ -43,7 +43,7 @@ pipeline{
       script{
        sh '''
            docker build -t bfctech:v1 .
-           docker tag bfctech:v1 <new_tag>
+           docker tag bfctech:v1 alwaysavail/bfc:v1
             
        '''
 }
@@ -52,8 +52,8 @@ pipeline{
      steps{
       script{
        sh '''
-            trivy <image_name>
-            docker push <image_name>
+            trivy image alwaysavail/bfc:v1
+            docker push alwaysavail/bfc:v1
        '''
 }
 }
