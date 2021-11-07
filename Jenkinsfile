@@ -32,10 +32,45 @@ pipeline{
      steps{
       script{
        sh '''
-            go version 
+            go version
+            gofmt -w hello.go 
+            go vet hello.go 
        '''
 }
 }
+  stage("Image Building"){
+     steps{
+      script{
+       sh '''
+           docker build -t bfctech:v1 .
+           docker tag bfctech:v1 alwaysavail/bfc:v1
+            
+       '''
+}
+}
+  stage("Image scanning"){
+     steps{
+      script{
+       sh '''
+            trivy image alwaysavail/bfc:v1
+            docker push alwaysavail/bfc:v1
+       '''
+}
+}
+  
+   stage("update version or infra"){
+    //fmt and lint
+     //steps{
+      //script{
+       //sh '''
+            //go version
+            //gofmt -w hello.go
+            //go vet hello.go
+       //'''
+}
+}
+
+
 }
 
 
