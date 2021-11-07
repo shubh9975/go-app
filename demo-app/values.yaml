@@ -1,2 +1,4 @@
 image:
    name: alwaysavail/bfc:v1
+replica:
+       count: 5
